@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "http://bookit.bartosz.space/wp-json/clinic/v1/:path*" }
+  ]
+}
