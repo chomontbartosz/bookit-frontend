@@ -3,7 +3,7 @@
 # 📅 Book.it — Frontend
 
 **Book.it is a lightweight appointment booking app: pick an expert, pick a free slot, book in under a minute.**
-This repo is the **user-facing React app**. It talks to a **headless WordPress** backend: a [🔗 custom plugin with a REST API](https://github.com/chomontbartosz/bookit-backend).
+This repo is the **user-facing React app**. It talks to a **headless WordPress** backend, which is a [🔗 custom plugin with a REST API](https://github.com/chomontbartosz/bookit-backend).
 
 [🚀 **Live demo**](https://bookit-frontend-wheat.vercel.app) · [🧩 Backend repo](https://github.com/chomontbartosz/bookit-backend)
 
@@ -20,10 +20,9 @@ This repo is the **user-facing React app**. It talks to a **headless WordPress**
 
 ## 💡 Concept
 
-| | |
 |---|---|
-| 😩 **Problem** | Small practices (clinics, consultants, coaches) book visits by phone or email: slow, error-prone, and closed outside office hours. |
-| ✅ **Solution** | A self-service booking page that shows only **real, free slots**, backed by a CMS the staff already knows (WordPress). |
+| 😩 **Problem** | Small businesses (clinics, consultants, coaches) book visits / consultations by phone or email, which is too slow, error-prone, and closed outside office hours. |
+| ✅ **Solution** | A scalable self-service booking page that shows only **real, free slots**, backed by a CMS the staff already knows (WordPress). Works perfect for solo entrepreneuers as well as large clinics. |
 | 👥 **For whom** | **Clients** book in a few clicks, no account needed. **Staff** manage experts and see bookings in the familiar WP admin. |
 
 ---
@@ -189,11 +188,4 @@ npm run dev
 - [ ] 🤖 CI on GitHub Actions (lint, typecheck, build, tests)
 - [ ] 📝 `CHANGELOG.md` + Conventional Commits + GitHub Releases
 - [ ] 📄 TypeScript types generated from the backend's OpenAPI spec
-
----
-
-<div align="center">
-
-Made by [bartosz.space](https://bartosz.space)
-
-</div>
+- [ ] 📄 Create instructions (including restrictions, rules, best practices, prohibitions) for AI Agents e.g. `AGENTS.md` and `CLAUDE.md`
