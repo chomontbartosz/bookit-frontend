@@ -1,13 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { I18nProvider } from './i18n/I18nProvider';
+import './styles/index.css';
 
-const rootElement = document.getElementById('root')!;
-rootElement.className = 'w-full min-h-screen bg-slate-50 flex justify-center items-center';
-
-  createRoot(rootElement).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <I18nProvider>
+      <App />
+    </I18nProvider>
   </StrictMode>,
-)
+);

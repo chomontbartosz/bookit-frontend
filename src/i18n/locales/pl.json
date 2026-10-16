@@ -1,0 +1,64 @@
+{
+  "app": {
+    "pageTitle": "Book.it · Umów wizytę"
+  },
+  "language": {
+    "label": "Zmień język"
+  },
+  "common": {
+    "retry": "Spróbuj ponownie"
+  },
+  "doctors": {
+    "title": "Wybierz eksperta",
+    "subtitle": "Z kim chcesz umówić wizytę?",
+    "loading": "Wczytywanie ekspertów…",
+    "empty": "Brak dostępnych ekspertów.",
+    "duration": "{{minutes}} min"
+  },
+  "calendar": {
+    "title": "Umów wizytę",
+    "with": "Ekspert: {{name}}",
+    "loading": "Wczytywanie terminów…",
+    "prevMonth": "Poprzedni miesiąc",
+    "nextMonth": "Następny miesiąc",
+    "noSlotsThisMonth": "Brak wolnych terminów w tym miesiącu. Sprawdź kolejny.",
+    "noSlotsAtAll": "Ten ekspert nie ma teraz wolnych terminów.",
+    "backToExperts": "Wróć do ekspertów"
+  },
+  "times": {
+    "title": "Dostępne godziny",
+    "backToCalendar": "Wróć do kalendarza",
+    "empty": "Brak wolnych godzin w tym dniu."
+  },
+  "form": {
+    "title": "Twoje dane",
+    "name": "Imię i nazwisko",
+    "namePlaceholder": "Jan Kowalski",
+    "email": "E-mail",
+    "emailPlaceholder": "jan@example.com",
+    "invalidEmail": "Podaj poprawny adres e-mail.",
+    "submit": "Zarezerwuj",
+    "submitting": "Rezerwowanie…",
+    "backToTimes": "Wróć do godzin"
+  },
+  "confirmation": {
+    "title": "Wizyta potwierdzona",
+    "details": "{{date}}, godz. {{time}}. Ekspert: {{name}}.",
+    "addToCalendar": "Dodaj do Kalendarza Google",
+    "eventTitle": "Wizyta – {{name}}",
+    "eventDetails": "Zarezerwowano przez Book.it",
+    "home": "Wróć na start"
+  },
+  "errors": {
+    "network_error": "Brak połączenia z serwerem. Sprawdź internet i spróbuj ponownie.",
+    "unknown_error": "Coś poszło nie tak. Spróbuj ponownie.",
+    "missing_patient_data": "Podaj imię, nazwisko i e-mail.",
+    "invalid_email": "Podaj poprawny adres e-mail.",
+    "invalid_data": "Brakuje danych rezerwacji lub są niepoprawne.",
+    "past_date": "Ten termin już minął.",
+    "invalid_slot": "Tego terminu nie ma w grafiku eksperta.",
+    "slot_taken": "Ten termin został właśnie zajęty. Wybierz inny.",
+    "doctor_not_found": "Ten ekspert jest już niedostępny.",
+    "too_many_requests": "Zbyt wiele prób. Odczekaj kilka minut."
+  }
+}

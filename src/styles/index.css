@@ -1,0 +1,180 @@
+/*
+ * Book.it styles: the only stylesheet.
+ * 1. Tailwind  2. Design tokens  3. Base  4. Components
+ * Components use these classes for visuals; layout utilities (flex, gap, grid) stay inline.
+ */
+
+/* ── 1. Tailwind ── */
+@import "tailwindcss";
+
+/* ── 2. Design tokens ── */
+@theme inline {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-brand-50: var(--color-blue-50);
+  --color-brand-100: var(--color-blue-100);
+  --color-brand-500: var(--color-blue-500);
+  --color-brand-600: var(--color-blue-600);
+  --color-brand-700: var(--color-blue-700);
+
+  --color-available-50: var(--color-emerald-50);
+  --color-available-100: var(--color-emerald-100);
+  --color-available-300: var(--color-emerald-300);
+  --color-available-500: var(--color-emerald-500);
+  --color-available-700: var(--color-emerald-700);
+}
+
+/* ── 3. Base ── */
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-50 font-sans text-slate-800 antialiased;
+  }
+
+  #root {
+    @apply flex min-h-screen items-start justify-center px-4 py-8 sm:items-center;
+  }
+}
+
+/* ── 4. Components ── */
+@layer components {
+  /* Layout */
+  .card {
+    @apply w-full max-w-xl rounded-2xl bg-white shadow-sm ring-1 ring-slate-200;
+  }
+  .card-header {
+    @apply flex items-center justify-between border-b border-slate-100 px-6 py-4;
+  }
+  .card-body {
+    @apply px-6 py-8;
+  }
+
+  /* Typography */
+  .logo {
+    @apply text-2xl font-semibold text-slate-800;
+  }
+  .logo-accent {
+    @apply text-brand-600;
+  }
+  .heading {
+    @apply text-xl font-semibold text-slate-800;
+  }
+  .subheading {
+    @apply text-sm text-slate-500;
+  }
+  .section-title {
+    @apply font-medium first-letter:uppercase;
+  }
+  .lead {
+    @apply text-slate-600 first-letter:uppercase;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white enabled:hover:bg-brand-700;
+  }
+  .btn-outline {
+    @apply border border-brand-600 text-brand-600 hover:bg-brand-600 hover:text-white;
+  }
+  .btn-ghost {
+    @apply text-slate-600 enabled:hover:bg-slate-100;
+  }
+  .btn-icon {
+    @apply inline-flex size-9 cursor-pointer items-center justify-center rounded-lg text-slate-600 transition
+      enabled:hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-30;
+  }
+  .link-back {
+    @apply inline-flex cursor-pointer items-center gap-1 text-sm text-brand-600 hover:underline;
+  }
+
+  /* Option cards (expert list) */
+  .option-card {
+    @apply w-full cursor-pointer rounded-xl border border-slate-200 bg-white p-4 text-left transition
+      hover:border-brand-500 hover:bg-brand-50
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+  }
+  .option-card-title {
+    @apply font-medium text-slate-800;
+  }
+  .option-card-meta {
+    @apply text-sm text-slate-500;
+  }
+
+  /* Calendar */
+  .calendar-weekday {
+    @apply text-center text-xs font-semibold uppercase text-slate-400;
+  }
+  .calendar-day {
+    @apply relative flex h-11 w-full items-center justify-center rounded-lg text-sm transition;
+  }
+  .calendar-day-available {
+    @apply cursor-pointer bg-available-50 font-medium text-available-700
+      hover:bg-available-100 hover:ring-1 hover:ring-available-300
+      focus-visible:outline-2 focus-visible:outline-brand-600;
+  }
+  .calendar-day-unavailable {
+    @apply cursor-default text-slate-300;
+  }
+  .calendar-day-today {
+    @apply ring-2 ring-brand-500;
+  }
+  .calendar-dot {
+    @apply absolute bottom-1.5 size-1 rounded-full bg-available-500;
+  }
+
+  /* Time slots */
+  .chip {
+    @apply cursor-pointer rounded-lg bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 transition
+      hover:bg-brand-100 focus-visible:outline-2 focus-visible:outline-brand-600;
+  }
+
+  /* Forms */
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm transition
+      placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+  }
+  .input-invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-100;
+  }
+  .field-error {
+    @apply mt-1 text-xs text-red-600;
+  }
+
+  /* Feedback */
+  .notice {
+    @apply rounded-lg px-4 py-3 text-sm;
+  }
+  .notice-muted {
+    @apply text-slate-500;
+  }
+  .notice-error {
+    @apply bg-red-50 text-red-700;
+  }
+  .notice-success {
+    @apply bg-available-50 text-available-700;
+  }
+  .success-badge {
+    @apply mx-auto flex size-12 items-center justify-center rounded-full bg-available-100 text-available-700;
+  }
+
+  /* Dropdown (language switcher) */
+  .dropdown {
+    @apply absolute right-0 z-20 mt-2 w-40 overflow-hidden rounded-lg bg-white py-1 shadow-lg ring-1 ring-slate-200;
+  }
+  .dropdown-item {
+    @apply flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-left text-sm text-slate-700 hover:bg-slate-50;
+  }
+  .dropdown-item-active {
+    @apply font-semibold text-brand-700;
+  }
+  .flag {
+    @apply h-3.5 w-5 rounded-[2px] object-cover ring-1 ring-black/10;
+  }
+}

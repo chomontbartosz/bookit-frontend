@@ -1,0 +1,64 @@
+{
+  "app": {
+    "pageTitle": "Book.it · Book an appointment"
+  },
+  "language": {
+    "label": "Change language"
+  },
+  "common": {
+    "retry": "Try again"
+  },
+  "doctors": {
+    "title": "Select an expert",
+    "subtitle": "Who would you like to book an appointment with?",
+    "loading": "Loading experts…",
+    "empty": "No experts available right now.",
+    "duration": "{{minutes}} min"
+  },
+  "calendar": {
+    "title": "Book an appointment",
+    "with": "with {{name}}",
+    "loading": "Loading availability…",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "noSlotsThisMonth": "No free slots this month. Try the next one.",
+    "noSlotsAtAll": "This expert has no free slots right now.",
+    "backToExperts": "Back to experts"
+  },
+  "times": {
+    "title": "Available times",
+    "backToCalendar": "Back to calendar",
+    "empty": "No free times left on this day."
+  },
+  "form": {
+    "title": "Your details",
+    "name": "Full name",
+    "namePlaceholder": "Jane Doe",
+    "email": "Email",
+    "emailPlaceholder": "jane@example.com",
+    "invalidEmail": "Please enter a valid email address.",
+    "submit": "Book now",
+    "submitting": "Booking…",
+    "backToTimes": "Back to times"
+  },
+  "confirmation": {
+    "title": "Appointment confirmed",
+    "details": "{{date}} at {{time}} with {{name}}.",
+    "addToCalendar": "Add to Google Calendar",
+    "eventTitle": "Appointment with {{name}}",
+    "eventDetails": "Booked via Book.it",
+    "home": "Back to home"
+  },
+  "errors": {
+    "network_error": "Can't reach the server. Check your connection and try again.",
+    "unknown_error": "Something went wrong. Please try again.",
+    "missing_patient_data": "Please enter your name and email.",
+    "invalid_email": "Please enter a valid email address.",
+    "invalid_data": "Some booking details are missing or invalid.",
+    "past_date": "This time is already in the past.",
+    "invalid_slot": "This time is not in the expert's schedule.",
+    "slot_taken": "Sorry, this time was just booked. Please pick another one.",
+    "doctor_not_found": "This expert is no longer available.",
+    "too_many_requests": "Too many attempts. Please wait a few minutes."
+  }
+}
